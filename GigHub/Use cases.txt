@@ -1,0 +1,13 @@
+
+Authentication:
+
+Register, Login, Forgot password, Edit profile
+
+Gigs:
+Add gig, Edit gig, Remove gig, View upcoming gigs, Search gigs by artist, genre or location, View details, 
+
+Gig Calender:
+Add to Calender, Remove from calender, View gigs i'm attending
+
+Following:
+Follow an artist, Unfollow, Whom i'm following, Gig feed
