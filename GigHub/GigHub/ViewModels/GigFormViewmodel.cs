@@ -21,7 +21,7 @@ namespace GigHub.ViewModels
         [Required]
         public byte Genre { get; set; }
 
-        [Required]
+        //[Required]
         public IEnumerable<Genre> Genres { get; set; }
 
         public DateTime GetDateTime()
