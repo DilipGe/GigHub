@@ -22,7 +22,7 @@ namespace GigHub.Controllers
                                 .Include(g => g.Genre) //For eager loading
                                 .Where(g => g.DateTime > DateTime.Now);
 
-            HomeViewModel viewModel = new HomeViewModel()
+            GigsViewModel viewModel = new GigsViewModel()
             {
                 UpcomingGigs = upcomingGigs,
                 ShowActions = User.Identity.IsAuthenticated
