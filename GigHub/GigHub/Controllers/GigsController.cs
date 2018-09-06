@@ -57,7 +57,7 @@ namespace GigHub.Controllers
 
             var upcomingGigs = _context.Attendances
                                 .Where(a => a.AttendeeId == userId)
-                                .Select(a=>a.Gig)
+                                .Select(a => a.Gig)
                                 .Include(g => g.Artist)
                                 .Include(g => g.Genre)
                                 .ToList();
@@ -71,5 +71,22 @@ namespace GigHub.Controllers
 
             return View("Gigs", viewModel);
         }  
+
+        public ActionResult Following()
+        {
+            var userId = User.Identity.GetUserId();
+
+            var followingArtists = _context.Followings
+                .Where(f => f.FollowerId == userId)
+                .Select(f => f.Followee)
+                .ToList();
+
+            FollowingViewModel viewModel = new FollowingViewModel()
+            {
+                User = followingArtists
+            };
+
+            return View(viewModel);
+        }
     }
 }
