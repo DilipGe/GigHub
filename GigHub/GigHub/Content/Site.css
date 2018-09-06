@@ -28,6 +28,10 @@ span.field-validation-error {
     font-weight: 700;
 }
 
+.vOffset{
+    margin-top:40px;
+}
+
 /*Boot strap overrides*/
 .navbar-inverse {
     background-color: #FF4342;
